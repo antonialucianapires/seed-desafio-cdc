@@ -22,7 +22,7 @@ public class AutorController {
     @PostMapping
     @Transactional
     public void novo(@RequestBody @Valid FormNovoAutor novoAutor) {
-        Autor autor = novoAutor.toModel(novoAutor.getNome(), novoAutor.getEmail(), novoAutor.getDescricao());
+        Autor autor = novoAutor.toModel();
         entityManager.persist(autor);
     }
 
