@@ -1,11 +1,9 @@
-package seed.cdc.api.resources;
+package seed.cdc.api.autor;
 
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import seed.cdc.api.domain.Autor;
-import seed.cdc.api.form.FormNovoAutor;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -21,7 +19,7 @@ public class AutorController {
 
     @PostMapping
     @Transactional
-    public void novo(@RequestBody @Valid FormNovoAutor novoAutor) {
+    public void novo(@RequestBody @Valid NovoAutorRequest novoAutor) {
         Autor autor = novoAutor.toModel();
         entityManager.persist(autor);
     }

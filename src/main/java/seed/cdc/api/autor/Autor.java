@@ -1,4 +1,4 @@
-package seed.cdc.api.domain;
+package seed.cdc.api.autor;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
