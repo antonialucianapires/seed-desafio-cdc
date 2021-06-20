@@ -1,5 +1,7 @@
 package seed.cdc.api.categoria;
 
+import seed.cdc.api.compartilhado.UniqueValue;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;

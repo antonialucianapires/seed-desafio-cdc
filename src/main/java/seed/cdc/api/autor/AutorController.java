@@ -14,18 +14,8 @@ import javax.validation.Valid;
 @RequestMapping("autor")
 public class AutorController {
 
-    //Carga instrínseca: 3
-
     @PersistenceContext
     private EntityManager entityManager;
-
-    @Autowired
-    private ProibeEmailDuplicadoAutorValidator proibeEmailDuplicadoAutorValidator;
-
-    @InitBinder
-    public void init(WebDataBinder binder) {
-        binder.addValidators(proibeEmailDuplicadoAutorValidator);
-    }
 
     @PostMapping
     @Transactional

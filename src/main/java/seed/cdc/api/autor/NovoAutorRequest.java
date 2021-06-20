@@ -1,5 +1,7 @@
 package seed.cdc.api.autor;
 
+import seed.cdc.api.compartilhado.UniqueValue;
+
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 
@@ -9,6 +11,7 @@ public class NovoAutorRequest {
     private String nome;
 
     @NotBlank(message = "O e-mail não poder ser nulo e/ou vazio")
+    @UniqueValue(domainClass = Autor.class, fieldName = "email")
     private String email;
 
     @NotBlank(message = "A descrição não poder ser nula e/ou vazia")
