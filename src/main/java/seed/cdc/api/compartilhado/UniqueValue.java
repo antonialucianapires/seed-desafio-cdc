@@ -14,5 +14,4 @@ public @interface UniqueValue {
     Class<? extends Payload>[] payload() default {};
     String fieldName();
     Class<?> domainClass();
-
 }
