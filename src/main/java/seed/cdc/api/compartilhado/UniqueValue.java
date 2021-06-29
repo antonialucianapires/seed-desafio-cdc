@@ -9,7 +9,7 @@ import java.lang.annotation.*;
 @Target({ElementType.FIELD})
 @Retention(RetentionPolicy.RUNTIME)
 public @interface UniqueValue {
-    String message() default "{seed.cdc.beanvalidation.uniquevalue}";
+    String message() default "{seed.cdc.api.compartilhado.UniqueValue.message}";
     Class<?>[] groups() default {};
     Class<? extends Payload>[] payload() default {};
     String fieldName();
